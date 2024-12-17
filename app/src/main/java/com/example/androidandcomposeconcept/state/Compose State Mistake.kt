@@ -7,7 +7,14 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import kotlinx.coroutines.launch
@@ -107,13 +114,13 @@ fun SecondUI(modifier: Modifier = Modifier) {
 fun ThirdUI(checkLoggedIn: Boolean) {
 
     //Mistake 👇
-    if (checkLoggedIn){
+    if (checkLoggedIn) {
         //navController.navigate("MainScreen")
     }
 
     //Solution 👇
     LaunchedEffect(key1 = checkLoggedIn) {
-        if (checkLoggedIn){
+        if (checkLoggedIn) {
             //navController.navigate("MainScreen")
         }
     }
@@ -132,4 +139,38 @@ fun ThirdUI(checkLoggedIn: Boolean) {
 On some other hand it can lead to wierd bug.
 */
 
+// Remember and RememberSaveable
+@Composable
+fun CounterLayout(modifier: Modifier = Modifier) {
+   // var count = 0  // the problem is here because in compose it will not work. we have to remember to update the state.
+   // var count by remember { mutableIntStateOf(0) } // it will work but it will not save the state while the configuration changes.
+   // var count by rememberSaveable { mutableIntStateOf(0) } // it will work and save the state while the configuration changes.
+
+    //we can also work like this 👇
+
+    val (count, setCount) = rememberSaveable { mutableIntStateOf(0) }
+
+    //first count will work as getter
+    // and setCount will work as setter
+
+
+    val nameList = rememberSaveable { mutableStateListOf("android", "iphone","samsung", "oneplus") } // we can use also as Mutable List
+
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+        Text(text = count.toString())
+
+        Button(onClick = {
+                nameList.add("realme")
+                nameList.remove("oneplus")
+                setCount(count+1)
+        }) {
+            Text("Click the button")
+        }
+    }
+}
 
