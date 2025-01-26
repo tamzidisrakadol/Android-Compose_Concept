@@ -1,4 +1,4 @@
-package com.example.androidandcomposeconcept.ErrorHandling.domain
+package com.example.androidandcomposeconcept.PractiseSet.ErrorHandling.domain
 
 
 typealias RootError = Error

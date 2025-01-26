@@ -1,4 +1,4 @@
-package com.example.androidandcomposeconcept.ErrorHandling.domain
+package com.example.androidandcomposeconcept.PractiseSet.ErrorHandling.domain
 
 import androidx.lifecycle.ViewModel
 

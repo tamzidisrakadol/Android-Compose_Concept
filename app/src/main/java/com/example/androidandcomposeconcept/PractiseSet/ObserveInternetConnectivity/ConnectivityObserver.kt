@@ -1,4 +1,4 @@
-package com.example.androidandcomposeconcept.ObserveInternetConnectivity
+package com.example.androidandcomposeconcept.PractiseSet.ObserveInternetConnectivity
 
 import kotlinx.coroutines.flow.Flow
 

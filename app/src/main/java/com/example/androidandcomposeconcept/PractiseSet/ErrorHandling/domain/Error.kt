@@ -1,0 +1,3 @@
+package com.example.androidandcomposeconcept.PractiseSet.ErrorHandling.domain
+
+sealed interface Error

@@ -1,4 +1,4 @@
-package com.example.androidandcomposeconcept.ObserveInternetConnectivity
+package com.example.androidandcomposeconcept.PractiseSet.ObserveInternetConnectivity
 
 import android.content.Context
 import android.net.ConnectivityManager

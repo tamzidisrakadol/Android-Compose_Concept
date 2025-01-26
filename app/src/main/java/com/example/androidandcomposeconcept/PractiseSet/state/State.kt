@@ -1,16 +1,14 @@
-package com.example.androidandcomposeconcept.state
+package com.example.androidandcomposeconcept.PractiseSet.state
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import kotlinx.coroutines.flow.MutableStateFlow
 
 /* What is state?
 => In Jetpack Compose, state refers to any value that can change over time and affects the UI.
