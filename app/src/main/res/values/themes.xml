@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <style name="Theme.AndroidAndComposeConcept" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="splashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_bg</item>
+        <item name="android:windowBackground">@drawable/grdient_bg</item>
+    </style>
 </resources>

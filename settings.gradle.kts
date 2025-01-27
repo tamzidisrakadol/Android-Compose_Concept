@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidAndComposeConcept"
 include(":app")
+include(":Utilities")
