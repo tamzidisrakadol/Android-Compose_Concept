@@ -9,8 +9,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import com.example.androidandcomposeconcept.presentation.components.AppToolbar
+import com.example.androidandcomposeconcept.presentation.components.BannerComponent
 import com.example.androidandcomposeconcept.ui.theme.whiteColor
+import com.example.androidandcomposeconcept.R
 
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
@@ -20,11 +23,15 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         Column (
             modifier = modifier
                 .fillMaxSize()
-                .wrapContentSize(align = Alignment.Center)
+                .wrapContentSize(align = Alignment.TopStart)
                 .background(color = whiteColor)
                 .padding(innerpadding)
         ){
-
+            BannerComponent(
+                title = stringResource(R.string.banner_title),
+                description = stringResource(R.string.banner_desc),
+                imgUrl = stringResource(R.string.imgUrl)
+            )
         }
     }
 

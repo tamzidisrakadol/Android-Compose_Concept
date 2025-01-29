@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -19,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.androidandcomposeconcept.R
 import com.example.androidandcomposeconcept.ui.theme.PrimaryColor
 
@@ -30,15 +32,16 @@ fun AppToolbar(modifier: Modifier = Modifier) {
             .systemBarsPadding()
             .fillMaxWidth()
             .wrapContentHeight()
-            .padding(18.dp)
+            .padding(start = 18.dp, end = 18.dp, top = 8.dp)
     ) {
-        Icon(imageVector = Icons.Default.Person, contentDescription = "", tint = Color.White)
+        Icon(imageVector = Icons.Default.Person, contentDescription = "", tint = Color.White, modifier = modifier.size(28.dp))
         Spacer(modifier = modifier.width(18.dp))
         TextComponent(
             modifier = modifier.wrapContentSize(),
             textValue = stringResource(R.string.add_address),
+            fontSizeValue = 20.sp
         )
         Spacer(modifier = modifier.weight(1f))
-        Icon(imageVector = Icons.Default.Notifications, contentDescription = "", tint = Color.White)
+        Icon(imageVector = Icons.Default.Notifications, contentDescription = "", tint = Color.White,modifier = modifier.size(28.dp))
     }
 }
