@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.androidandcomposeconcept.R
+import com.example.androidandcomposeconcept.presentation.screens.AppNavGraph
 import com.example.androidandcomposeconcept.ui.theme.AndroidAndComposeConceptTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,9 +22,7 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
         setContent {
             AndroidAndComposeConceptTheme {
-                Surface (modifier = Modifier.fillMaxSize()) {
-
-                }
+                AppNavGraph()
             }
         }
     }
