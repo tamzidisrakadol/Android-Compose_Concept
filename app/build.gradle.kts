@@ -86,6 +86,8 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
     //coroutine
     implementation(libs.kotlinx.coroutines.android)
+    //animation
+    implementation (libs.lottie.compose)
 }
 
 kapt {

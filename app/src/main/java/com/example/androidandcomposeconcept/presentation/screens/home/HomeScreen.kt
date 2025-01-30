@@ -30,7 +30,8 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             BannerComponent(
                 title = stringResource(R.string.banner_title),
                 description = stringResource(R.string.banner_desc),
-                imgUrl = stringResource(R.string.imgUrl)
+                imgUrl = null,
+                resourceValue = R.drawable.bitcoin
             )
         }
     }

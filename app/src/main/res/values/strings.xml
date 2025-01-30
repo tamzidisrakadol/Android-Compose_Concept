@@ -2,7 +2,6 @@
     <string name="app_name">Super App</string>
     <string name="add_address">Add Address</string>
     <string name="banner_title">Ad Tech Banner</string>
-    <string name="banner_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry standard dummy text ever since the 1500s</string>
+    <string name="banner_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
     <string name="imgUrl">https://rb.gy/es0jyr</string>
 </resources>
